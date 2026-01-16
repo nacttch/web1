@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets Library | Gamevy Lib</title>
+    <!-- Premium Tech Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .asset-grid-item:hover .download-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-tr from-violet-600 to-pink-500 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-layer-group text-white text-xs"></i>
+                </div>
+                <span class="text-xl font-black tracking-tighter uppercase">GAMEVY <span class="gradient-text">LIB</span></span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-bold">
+                <a href="/" class="hover:text-violet-400 transition">Documentation</a>
+                <a href="/assets/" class="text-violet-400">Assets</a>
+                <a href="/api/" class="hover:text-violet-400 transition">API Reference</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="bg-violet-600 hover:bg-violet-500 text-white px-4 py-2 rounded-lg text-[10px] font-bold transition uppercase">Access Portal</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="pt-40 pb-12 px-6 max-w-7xl mx-auto w-full">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+                <h1 class="text-5xl font-black mb-4 tracking-tight">Assets <span class="gradient-text">Library</span></h1>
+                <p class="text-slate-400 max-w-xl">
+                    Centralized repository for high-fidelity game assets, UI components, and brand guidelines for the Gamevy ecosystem.
+                </p>
+            </div>
+            <div class="flex gap-3">
+                <div class="glass-card px-4 py-2 rounded-xl border border-white/10 flex items-center gap-3">
+                    <span class="text-[10px] font-black uppercase text-slate-500 tracking-widest">Global CDN</span>
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pb-20 px-6 max-w-7xl mx-auto w-full">
+        
+        <!-- Category Filter (Visual Only) -->
+        <div class="flex gap-4 mb-10 overflow-x-auto pb-4 no-scrollbar">
+            <button class="bg-white text-black px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap">All Assets</button>
+            <button class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap transition">UI Kits</button>
+            <button class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap transition">Audio Packs</button>
+            <button class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap transition">3D Models</button>
+            <button class="bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-2 rounded-full text-xs font-bold whitespace-nowrap transition">Branding</button>
+        </div>
+
+        <!-- Asset Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- UI Kit Card -->
+            <div class="glass-card p-4 rounded-3xl group transition-all duration-300 hover:border-violet-500/30">
+                <div class="aspect-video bg-slate-900 rounded-2xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <i class="fa-solid fa-compass-drafting text-4xl text-slate-700 group-hover:text-violet-500 transition-colors"></i>
+                    <div class="absolute inset-0 bg-violet-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-black p-3 rounded-full shadow-xl"><i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-sm">G-System UI Kit</h3>
+                        <span class="text-[8px] bg-violet-500/20 text-violet-400 px-2 py-0.5 rounded uppercase font-black">Figma</span>
+                    </div>
+                    <p class="text-slate-500 text-[10px] leading-relaxed mb-4">Complete set of buttons, modals, and game HUD elements.</p>
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-3">
+                        <span>142 MB</span>
+                        <span>v2.1.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Audio Pack Card -->
+            <div class="glass-card p-4 rounded-3xl group transition-all duration-300 hover:border-pink-500/30">
+                <div class="aspect-video bg-slate-900 rounded-2xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <i class="fa-solid fa-waveform-lines text-4xl text-slate-700 group-hover:text-pink-500 transition-colors"></i>
+                    <div class="absolute inset-0 bg-pink-600/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <button class="bg-white text-black p-3 rounded-full shadow-xl"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+                <div class="px-2">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-sm">Winner SFX Pack</h3>
+                        <span class="text-[8px] bg-pink-500/20 text-pink-400 px-2 py-0.5 rounded uppercase font-black">WAV / MP3</span>
+                    </div>
+                    <p class="text-slate-500 text-[10px] leading-relaxed mb-4">High-energy celebration sounds for wins and jackpots.</p>
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-3">
+                        <span>85 MB</span>
+                        <span>v1.0.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Identity -->
+            <div class="glass-card p-4 rounded-3xl group transition-all duration-300 hover:border-cyan-500/30">
+                <div class="aspect-video bg-slate-900 rounded-2xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <i class="fa-solid fa-bezier-curve text-4xl text-slate-700 group-hover:text-cyan-500 transition-colors"></i>
+                </div>
+                <div class="px-2">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-sm">Brand Identity</h3>
+                        <span class="text-[8px] bg-cyan-500/20 text-cyan-400 px-2 py-0.5 rounded uppercase font-black">Vector</span>
+                    </div>
+                    <p class="text-slate-500 text-[10px] leading-relaxed mb-4">Official logos, color palettes, and typography guidelines.</p>
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-3">
+                        <span>12 MB</span>
+                        <span>2026 Rev</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Localization Strings -->
+            <div class="glass-card p-4 rounded-3xl group transition-all duration-300 hover:border-emerald-500/30">
+                <div class="aspect-video bg-slate-900 rounded-2xl mb-4 flex items-center justify-center relative overflow-hidden">
+                    <i class="fa-solid fa-language text-4xl text-slate-700 group-hover:text-emerald-500 transition-colors"></i>
+                </div>
+                <div class="px-2">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-sm">Global Lexicon</h3>
+                        <span class="text-[8px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded uppercase font-black">JSON</span>
+                    </div>
+                    <p class="text-slate-500 text-[10px] leading-relaxed mb-4">Pre-translated strings for over 40 languages and regions.</p>
+                    <div class="flex items-center justify-between text-[10px] text-slate-400 border-t border-white/5 pt-3">
+                        <span>4.2 MB</span>
+                        <span>v3.0.1</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-slate-950 border-t border-white/5 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <span class="text-lg font-black tracking-tighter uppercase">GAMEVY <span class="gradient-text">LIB</span></span>
+                <p class="text-slate-500 text-xs mt-2 uppercase tracking-widest">Performance. Perfection. Play.</p>
+            </div>
+            <div class="flex space-x-12">
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] mb-2">Support</span>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">Help Center</a>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">Asset Request</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-[10px] text-slate-700 tracking-[0.5em] uppercase">
+            © 2026 Gamevy Ltd. Asset Portal.
+        </div>
+    </footer>
+
+</body>
+</html>

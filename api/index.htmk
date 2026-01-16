@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference | Gamevy Lib</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Outfit', sans-serif; background-color: #030712; color: #f3f4f6; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-card { background: rgba(17, 24, 39, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .gradient-text { background: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        pre { background: #0a0e1a; padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-card border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+            <a href="/" class="flex items-center gap-2">
+                <span class="text-xl font-black tracking-tighter uppercase">GAMEVY <span class="gradient-text">LIB</span></span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-bold">
+                <a href="/" class="hover:text-violet-400 transition">Documentation</a>
+                <a href="/assets/" class="hover:text-violet-400 transition">Assets</a>
+                <a href="/api/" class="text-violet-400">API Reference</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-20 max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-12">
+        <!-- Sidebar Navigation -->
+        <aside class="w-full lg:w-64 flex-shrink-0">
+            <div class="sticky top-40 space-y-8">
+                <div>
+                    <h3 class="text-[10px] uppercase tracking-widest text-slate-600 font-black mb-4">Authentication</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#auth-intro" class="hover:text-violet-400 transition">Introduction</a></li>
+                        <li><a href="#api-keys" class="hover:text-violet-400 transition">API Keys</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-[10px] uppercase tracking-widest text-slate-600 font-black mb-4">Core Endpoints</h3>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#game-init" class="text-violet-400 font-bold">POST Game.init()</a></li>
+                        <li><a href="#game-state" class="hover:text-violet-400 transition">GET Game.state()</a></li>
+                        <li><a href="#transaction" class="hover:text-violet-400 transition">PUT Transaction</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Documentation Content -->
+        <section class="flex-grow max-w-3xl">
+            <h1 class="text-5xl font-black mb-8">API <span class="gradient-text">Reference</span></h1>
+            
+            <div id="game-init" class="mb-16">
+                <h2 class="text-2xl font-bold mb-4 code-font text-violet-400">POST /v1/game/init</h2>
+                <p class="text-slate-400 mb-6 leading-relaxed">Initializes a new game session for a specific player. This endpoint returns the initial RNG seed and balance configuration.</p>
+                
+                <h3 class="text-xs font-black uppercase tracking-widest text-slate-600 mb-4">Request Example</h3>
+                <pre class="code-font text-xs text-emerald-400">
+curl -X POST https://api.gamevy.com/v1/game/init \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -d '{
+    "game_id": "lucky_slots_01",
+    "currency": "GBP"
+  }'</pre>
+
+                <h3 class="text-xs font-black uppercase tracking-widest text-slate-600 my-4">Parameters</h3>
+                <div class="glass-card rounded-xl overflow-hidden text-sm">
+                    <div class="bg-white/5 px-4 py-2 flex justify-between border-b border-white/5">
+                        <span class="code-font font-bold">game_id</span>
+                        <span class="text-slate-500 italic">string (required)</span>
+                    </div>
+                    <div class="bg-transparent px-4 py-2 flex justify-between border-b border-white/5">
+                        <span class="code-font font-bold">currency</span>
+                        <span class="text-slate-500 italic">string (optional)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 bg-slate-950 border-t border-white/5 mt-auto text-center text-[10px] text-slate-700 tracking-[0.5em] uppercase">
+        © 2026 Gamevy Ltd. API Documentation.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamevy Library | Developer Portal</title>
+    <!-- Premium Tech Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #030712;
+            color: #f3f4f6;
+        }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .neon-border {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-20">
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-gradient-to-tr from-violet-600 to-pink-500 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-layer-group text-white text-xs"></i>
+                </div>
+                <span class="text-xl font-black tracking-tighter uppercase">GAMEVY <span class="gradient-text">LIB</span></span>
+            </a>
+            <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-bold">
+                <a href="/" class="text-violet-400">Documentation</a>
+                <a href="/assets/" class="hover:text-violet-400 transition">Assets</a>
+                <a href="/api/" class="hover:text-violet-400 transition">API Reference</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-sm font-bold bg-white/5 hover:bg-white/10 px-5 py-2 rounded-full transition border border-white/10">v4.2.0</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-48 pb-32 px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+        <!-- Decorative Glows -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-violet-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/2 -right-24 w-80 h-80 bg-pink-600/10 rounded-full blur-[120px]"></div>
+
+        <div class="relative z-10 max-w-4xl">
+            <span class="code-font text-violet-400 text-sm mb-4 block">npm install @gamevy/core</span>
+            <h1 class="text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
+                Engineered for <br><span class="gradient-text">Pure Joy.</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                The official developer library for Gamevy projects. High-performance game engines, asset management, and seamless API integration.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="/docs/" class="bg-violet-600 hover:bg-violet-500 text-white px-10 py-4 rounded-xl font-bold transition-all transform hover:scale-105 neon-border">
+                    Get Started
+                </a>
+                <a href="/github/" class="bg-slate-800 hover:bg-slate-700 text-white px-10 py-4 rounded-xl font-bold transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-card p-10 rounded-3xl group hover:border-violet-500/50 transition-all duration-500">
+            <div class="w-12 h-12 bg-violet-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-violet-500/20 transition">
+                <i class="fa-solid fa-bolt-lightning text-violet-500 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Core Engine</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">Lightweight iGaming engine built on top of PixiJS for ultra-smooth 60FPS performance on mobile and desktop.</p>
+            <a href="/docs/engine" class="text-xs font-black uppercase tracking-widest text-violet-400 group-hover:underline">Explore Specs &rarr;</a>
+        </div>
+
+        <div class="glass-card p-10 rounded-3xl group hover:border-pink-500/50 transition-all duration-500">
+            <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pink-500/20 transition">
+                <i class="fa-solid fa-cube text-pink-500 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Asset Pipeline</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">Optimized texture atlas generation and audio compression tailored for low-bandwidth environments.</p>
+            <a href="/docs/assets" class="text-xs font-black uppercase tracking-widest text-pink-400 group-hover:underline">Explore Specs &rarr;</a>
+        </div>
+
+        <div class="glass-card p-10 rounded-3xl group hover:border-cyan-500/50 transition-all duration-500">
+            <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500/20 transition">
+                <i class="fa-solid fa-shield-check text-cyan-500 text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">RNG Wrapper</h3>
+            <p class="text-slate-400 text-sm leading-relaxed mb-6">GLI-certified random number generator implementations for provably fair gaming experiences.</p>
+            <a href="/docs/security" class="text-xs font-black uppercase tracking-widest text-cyan-400 group-hover:underline">Explore Specs &rarr;</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-slate-950 border-t border-white/5 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 text-center md:text-left flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0">
+                <span class="text-lg font-black tracking-tighter uppercase">GAMEVY <span class="gradient-text">LIB</span></span>
+                <p class="text-slate-500 text-xs mt-2 uppercase tracking-widest">Performance. Perfection. Play.</p>
+            </div>
+            <div class="flex space-x-12">
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] mb-2">Legal</span>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">Privacy</a>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">Licensing</a>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] text-slate-600 font-black uppercase tracking-[0.2em] mb-2">Support</span>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">Discord</a>
+                    <a href="#" class="text-xs text-slate-400 hover:text-white transition">GitHub</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 text-center text-[10px] text-slate-700 tracking-[0.5em] uppercase">
+            © 2026 Gamevy Ltd. Developer Portal.
+        </div>
+    </footer>
+
+</body>
+</html>
